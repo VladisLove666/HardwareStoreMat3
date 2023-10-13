@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace HardwareStoreMat3.Components
 {
     /// <summary>
-    /// Логика взаимодействия для Page1.xaml
+    /// Логика взаимодействия для ProductUserControl.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class ProductUserControl : Page
     {
-        public Page1()
+        public ProductUserControl(Image image, string Title, string Evaluation, string KolvoOtziv, string cost, string CostWithDiscount, Visibility costTbVisibility)
         {
             InitializeComponent();
+            ProductImage = image;
+            TitleTb.Text = Title;
+            OcenkaTb.Text = Evaluation;
+            OtziviTb.Text = KolvoOtziv;
+            CostTb.Text = cost;
+            CostWithDiscountTb.Text = CostWithDiscount;
+            CostTb.Visibility = costTbVisibility;
         }
     }
 }

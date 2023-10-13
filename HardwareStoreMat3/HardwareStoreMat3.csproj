@@ -77,28 +77,31 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Components\Feedback.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\Model1.Context.cs">
+    <Compile Include="Components\HardwareShop322Mat.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>HardwareShop322Mat.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\Model1.cs">
+    <Compile Include="Components\HardwareShop322Mat.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\Model1.Designer.cs">
+    <Compile Include="Components\HardwareShop322Mat.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Product.cs">
+      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
     </Compile>
     <Compile Include="Components\ProductUserControl.xaml.cs">
       <DependentUpon>ProductUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Components\Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Components\sysdiagrams.cs">
+      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -123,12 +126,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Components\Model1.edmx">
+    <EntityDeploy Include="Components\HardwareShop322Mat.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>HardwareShop322Mat.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Components\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Components\HardwareShop322Mat.edmx.diagram">
+      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -140,21 +143,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Components\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="Components\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-    <Resource Include="Images\star.png" />
+    <Resource Include="Images\Diagramma.png" />
+    <Resource Include="Images\Heart.png" />
+    <Resource Include="Images\korzina.png" />
+    <Resource Include="Images\Star1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Components\HardwareShop322Mat.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
+      <LastGenOutput>HardwareShop322Mat.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Components\HardwareShop322Mat.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
+      <LastGenOutput>HardwareShop322Mat.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

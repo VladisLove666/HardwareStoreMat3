@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9d71201ff1ce4eb7ae167db9844f1baa" Name="Diagram1">
+      <Diagram DiagramId="9ecd524f8e454780a6fcd6353ee0b27c" Name="Diagram1">
         <EntityTypeShape EntityType="HardwareShop322MatModel.Feedback" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="HardwareShop322MatModel.Product" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HardwareShop322MatModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="HardwareShop322MatModel.FK_Feedback_Product" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

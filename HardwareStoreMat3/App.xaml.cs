@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HardwareStoreMat3.Components;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace HardwareStoreMat3
     /// </summary>
     public partial class App : Application
     {
+        public static HardwareShop322MatEntities1 db = new HardwareShop322MatEntities1();
     }
 }

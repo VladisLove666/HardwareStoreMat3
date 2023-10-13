@@ -13,10 +13,10 @@ namespace HardwareStoreMat3.Components
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HardwareShop322MatEntities : DbContext
+    public partial class HardwareShop322MatEntities1 : DbContext
     {
-        public HardwareShop322MatEntities()
-            : base("name=HardwareShop322MatEntities")
+        public HardwareShop322MatEntities1()
+            : base("name=HardwareShop322MatEntities1")
         {
         }
     
@@ -27,5 +27,6 @@ namespace HardwareStoreMat3.Components
     
         public virtual DbSet<Feedback> Feedback { get; set; }
         public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }
