@@ -94,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Components\Partial classes\Product.cs" />
     <Compile Include="Components\Product.cs">
       <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
     </Compile>
@@ -162,6 +163,8 @@
       <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
       <LastGenOutput>HardwareShop322Mat.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\tovar.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,6 +24,21 @@ namespace HardwareStoreMat3
         public MainWindow()
         {
             InitializeComponent();
+            Random random = new Random();
+            var products = App.db.Product.ToList();
+            foreach (var product in products)
+            {
+                ProductWrapPanel.Children.Add(
+                    new ProductUserControl(
+                    product.Title,
+                    $"{product.AvgOcenka: 0.00}",
+                    product.KolvoOtziv + " отзывов",
+                    $"{product.Cost: 0.00}",
+                    product.CostWithDiscount.ToString(),
+                    product.CostVisiblity
+                    )
+                );
+            }
         }
     }
 }

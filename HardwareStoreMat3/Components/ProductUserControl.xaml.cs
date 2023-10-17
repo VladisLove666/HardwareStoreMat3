@@ -18,12 +18,12 @@ namespace HardwareStoreMat3.Components
     /// <summary>
     /// Логика взаимодействия для ProductUserControl.xaml
     /// </summary>
-    public partial class ProductUserControl : Page
+    public partial class ProductUserControl : UserControl
     {
-        public ProductUserControl(Image image, string Title, string Evaluation, string KolvoOtziv, string cost, string CostWithDiscount, Visibility costTbVisibility)
+
+        public ProductUserControl(string Title, string Evaluation, string KolvoOtziv, string cost, string CostWithDiscount, Visibility costTbVisibility)
         {
             InitializeComponent();
-            ProductImage = image;
             TitleTb.Text = Title;
             OcenkaTb.Text = Evaluation;
             OtziviTb.Text = KolvoOtziv;
