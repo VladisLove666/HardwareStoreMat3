@@ -20,16 +20,17 @@ namespace HardwareStoreMat3.Components
     /// </summary>
     public partial class ProductUserControl : UserControl
     {
-
-        public ProductUserControl(string Title, string Evaluation, string KolvoOtziv, string cost, string CostWithDiscount, Visibility costTbVisibility)
+        Product product;
+        public ProductUserControl(Product _product)
         {
             InitializeComponent();
-            TitleTb.Text = Title;
-            OcenkaTb.Text = Evaluation;
-            OtziviTb.Text = KolvoOtziv;
-            CostTb.Text = cost;
-            CostWithDiscountTb.Text = CostWithDiscount;
-            CostTb.Visibility = costTbVisibility;
+            product = _product;
+            TitleTb.Text = product.Title;
+            OcenkaTb.Text = product.AvgOcenka.ToString();
+            OtziviTb.Text = product.KolvoOtziv.ToString();
+            CostTb.Text = product.Cost.ToString();
+            CostWithDiscountTb.Text = product.CostWithDiscount;
+            CostTb.Visibility = product.CostVisiblity;
         }
     }
 }

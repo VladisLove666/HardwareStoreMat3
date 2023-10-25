@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace HardwareStoreMat3
 {
@@ -24,21 +25,22 @@ namespace HardwareStoreMat3
         public MainWindow()
         {
             InitializeComponent();
+            //var path = @"C:\Users\222114\Desktop\";
+            //foreach (var item in App.db.Product.ToArray())
+            //{
+            //    var fullPath = path + item.MainImagePath.Trim();
+            //    var imageByte = File.ReadAllBytes(fullPath);
+            //    item.MainImage = imageByte;
+            //}
+            //App.db.SaveChanges();
             Random random = new Random();
             var products = App.db.Product.ToList();
             foreach (var product in products)
             {
                 ProductWrapPanel.Children.Add(
-                    new ProductUserControl(
-                    product.Title,
-                    $"{product.AvgOcenka: 0.00}",
-                    product.KolvoOtziv + " отзывов",
-                    $"{product.Cost: 0.00}",
-                    product.CostWithDiscount.ToString(),
-                    product.CostVisiblity
-                    )
-                );
+                    new ProductUserControl(product));
             }
+
         }
     }
 }

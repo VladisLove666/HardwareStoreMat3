@@ -25,17 +25,17 @@
                     <TextBlock x:Name="OtziviTb" VerticalAlignment="Center" FontSize="24" Margin="45 5">x отзывов</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Row="3">
-                    <TextBlock x:Name="CostWithDiscountTb" VerticalAlignment="Center" Margin="5" FontSize="24">цена</TextBlock>
-                    <TextBlock x:Name="CostTb" VerticalAlignment="Center" Margin="5" FontSize="24" TextDecorations="Strikethrough" Foreground="#FF7C7C7C">цена без скидки</TextBlock>
+                    <TextBlock x:Name="CostWithDiscountTb" VerticalAlignment="Center" Margin="5" FontSize="24">цена со скидкой</TextBlock>
+                    <TextBlock x:Name="CostTb" VerticalAlignment="Center" Margin="5" FontSize="24" TextDecorations="Strikethrough" Foreground="#FF7C7C7C">цена</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Row="4">
-                    <Button Margin="5" Height="45">
+                    <Button Margin="5" Height="40">
                         <Image Source="/Images/korzina.png" Margin="5"/>
                     </Button>
-                    <Button Margin="5" Height="45">
+                    <Button Margin="5" Height="40">
                         <Image Source="/Images/Heart.png" Margin="5"/>
                     </Button>
-                    <Button Margin="5" Height="45">
+                    <Button Margin="5" Height="40">
                         <Image Source="/Images/Diagramma.png" Margin="5"/>
                     </Button>
                 </StackPanel>
