@@ -15,5 +15,6 @@ namespace HardwareStoreMat3
     public partial class App : Application
     {
         public static HardwareShop322MatEntities1 db = new HardwareShop322MatEntities1();
+        public static bool isAdmin = false;
     }
 }

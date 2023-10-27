@@ -32,14 +32,15 @@
             <TextBlock VerticalAlignment="Center">По названию и описанию</TextBlock>
             <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1" HorizontalAlignment="Center">
-            <WrapPanel x:Name="ServiceWrapPanel" Grid.Row="1">
-
-            </WrapPanel>
-        </ScrollViewer>
         <StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
             <Button x:Name="AddBtn" Grid.Row="2" >Добавить</Button>
             <TextBlock VerticalAlignment="Center" x:Name="CountDateTb" Margin="5 0"></TextBlock>
         </StackPanel>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="0,47,0,5" Grid.RowSpan="2">
+            <WrapPanel x:Name="ProductWrapPanel">
+
+            </WrapPanel>
+
+        </ScrollViewer>
     </Grid>
 </Page>

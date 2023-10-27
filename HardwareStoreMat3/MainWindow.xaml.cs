@@ -25,6 +25,7 @@ namespace HardwareStoreMat3
         public MainWindow()
         {
             InitializeComponent();
+            Navigation.mainWindow = this;
             //var path = @"C:\Users\222114\Desktop\";
             //foreach (var item in App.db.Product.ToArray())
             //{
@@ -33,14 +34,33 @@ namespace HardwareStoreMat3
             //    item.MainImage = imageByte;
             //}
             //App.db.SaveChanges();
-            Random random = new Random();
-            var products = App.db.Product.ToList();
-            foreach (var product in products)
-            {
-                ProductWrapPanel.Children.Add(
-                    new ProductUserControl(product));
-            }
+            Navigation.NextPage(new PageComponent("СУ", new ServiceListPage()));
 
+        }
+
+
+        private void GoBackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            App.isAdmin = false;
+            Navigation.NextPage(new PageComponent("СУ", new ServiceListPage()));
+            PassB.Clear();
+            Navigation.ClearHistory();
+        }
+
+        private void ActiveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (PassB.Password.ToString() == "1111")
+            {
+                App.isAdmin = true;
+            }
+            PassB.Clear();
+            Navigation.NextPage(new PageComponent("СУ", new ServiceListPage()));
+            Navigation.ClearHistory();
+        }
+
+        private void DActiveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.BackPage();
         }
     }
 }

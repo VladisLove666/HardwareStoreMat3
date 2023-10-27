@@ -23,6 +23,12 @@ namespace HardwareStoreMat3.Components
         public ServiceListPage()
         {
             InitializeComponent();
+            Random random = new Random();
+            var products = App.db.Product.ToList();
+            foreach (var product in products)
+            {
+                ProductWrapPanel.Children.Add(new ProductUserControl(product));
+            }
             Refresh();
         }
         private void Refresh()
@@ -62,16 +68,6 @@ namespace HardwareStoreMat3.Components
                 }
 
             }
-            if (SearchTb.Text != null)
-            {
-                services = services.Where(x => x.Title.ToLower().Contains(SearchTb.Text.ToLower()) || x.Description.ToLower().Contains(SearchTb.Text.ToLower()));
-            }
-            ServiceWrapPanel.Children.Clear();
-            foreach (var service in services)
-            {
-                ServiceWrapPanel.Children.Add(new ProductUserControl(service));
-            }
-            CountDateTb.Text = services.Count() + " из " + App.db.Product.Count();
         }
 
         private void SortPriceCb_SelectionChanged(object sender, SelectionChangedEventArgs e)

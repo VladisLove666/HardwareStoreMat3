@@ -6,13 +6,35 @@
         xmlns:local="clr-namespace:HardwareStoreMat3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Margin="15 0 5 0">
-            <WrapPanel x:Name="ProductWrapPanel">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="29*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Background="#FFE7FABF">
+            <Button x:Name="GoBackBtn" Click="GoBackBtn_Click">Назад</Button>
+            <Button x:Name="ActiveBtn" Click="ActiveBtn_Click">
+                <TextBlock>Вкл
+                <LineBreak/>
+                админа</TextBlock>
+            </Button>
+            <PasswordBox x:Name="PassB"></PasswordBox>
+            <Button x:Name="DActiveBtn" Click="DActiveBtn_Click">
+                <TextBlock>Выкл
+                <LineBreak/>
+                админа</TextBlock>
+            </Button>
+        </StackPanel>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="10,72,10,0" Grid.RowSpan="2" Grid.Column="1">
+            <WrapPanel x:Name="ProductWrapPanel2">
 
             </WrapPanel>
-            
+
         </ScrollViewer>
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Column="1" Grid.Row="1"></Frame>
     </Grid>
 </Window>
