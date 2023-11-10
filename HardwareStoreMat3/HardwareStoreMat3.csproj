@@ -163,6 +163,7 @@
       <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
       <LastGenOutput>HardwareShop322Mat.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\udalenie.png" />
     <Resource Include="Images\tovar.jpg" />
   </ItemGroup>
   <ItemGroup />

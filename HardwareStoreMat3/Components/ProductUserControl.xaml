@@ -38,6 +38,9 @@
                     <Button Margin="5" Height="40">
                         <Image Source="/Images/Diagramma.png" Margin="5"/>
                     </Button>
+                    <Button Margin="75 0 0 0" Height="40" Click="Button_Click" >
+                        <Image Source="/Images/udalenie.png" Margin="5"/>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Border>

@@ -96,5 +96,6 @@ namespace HardwareStoreMat3
         {
             Refresh();
         }
+
     }
 }

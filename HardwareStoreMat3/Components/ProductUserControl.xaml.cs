@@ -32,5 +32,19 @@ namespace HardwareStoreMat3.Components
             CostWithDiscountTb.Text = product.CostWithDiscount;
             CostTb.Visibility = product.CostVisiblity;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (product.Feedback != null)
+            {
+                MessageBox.Show("Удаление запрещено");
+            }
+            else
+            {
+                App.db.Product.Remove(product);
+                App.db.SaveChanges();
+            }
+        }
+
     }
 }
