@@ -5,36 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HardwareStoreMat3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1000">
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="15*"></RowDefinition>
+            <RowDefinition Height="150*"></RowDefinition>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="29*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Background="#FFE7FABF">
-            <Button x:Name="GoBackBtn" Click="GoBackBtn_Click">Назад</Button>
-            <Button x:Name="ActiveBtn" Click="ActiveBtn_Click">
-                <TextBlock>Вкл
-                <LineBreak/>
-                админа</TextBlock>
-            </Button>
-            <PasswordBox x:Name="PassB"></PasswordBox>
-            <Button x:Name="DActiveBtn" Click="DActiveBtn_Click">
-                <TextBlock>Выкл
-                <LineBreak/>
-                админа</TextBlock>
-            </Button>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="36" Width="800">
+            <TextBlock Margin="5" FontSize="15" Width="60">По цене</TextBlock>
+            <ComboBox x:Name="SortCb" Margin="5" SelectionChanged="SortCb_SelectionChanged">
+                <ComboBoxItem>По умолчанию</ComboBoxItem>
+                <ComboBoxItem>По возрастанию</ComboBoxItem>
+                <ComboBoxItem>По убыванию</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Margin="5" FontSize="15">По скидке</TextBlock>
+            <ComboBox Margin="5" x:Name="DiscountFilterCb" SelectionChanged="DiscountFilterCb_SelectionChanged">
+                <ComboBoxItem>Все</ComboBoxItem>
+                <ComboBoxItem>от 0 до 5%</ComboBoxItem>
+                <ComboBoxItem>от 5 до 15%</ComboBoxItem>
+                <ComboBoxItem>от 15 до 30%</ComboBoxItem>
+                <ComboBoxItem>от 30 до 70%</ComboBoxItem>
+                <ComboBoxItem>от 70 до 100%</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Margin="5" FontSize="15">По названию и описанию</TextBlock>
+            <TextBox Margin="5" x:Name="SearchTb" FontSize="14" TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="10,72,10,0" Grid.RowSpan="2" Grid.Column="1">
-            <WrapPanel x:Name="ProductWrapPanel2">
-
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="0,72,0,0" Grid.RowSpan="2">
+            <WrapPanel x:Name="ProductWrapPanel" HorizontalAlignment="Center">
             </WrapPanel>
-
         </ScrollViewer>
-        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Column="1" Grid.Row="1"></Frame>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" Height="30">
+            <Button x:Name="AddBtn" FontSize="20" Margin="5 0">Добавить</Button>
+            <TextBlock x:Name="KolvoProductovTb" Margin="15 0" Width="100"></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

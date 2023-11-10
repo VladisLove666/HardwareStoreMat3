@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7FB5A94B-0C2A-4B01-968B-5FC82C568E9C}</ProjectGuid>
+    <ProjectGuid>{ACCB6D68-E38A-4994-B63D-775530F11487}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HardwareStoreMat3</RootNamespace>
-    <AssemblyName>HardwareStoreMat3</AssemblyName>
+    <RootNamespace>HardwareStoreMat4</RootNamespace>
+    <AssemblyName>HardwareStoreMat4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -64,9 +64,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Components\ProductUserControl.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Components\ReagPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Components\ServiceUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Components\UpEnPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -77,39 +85,62 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Components\Feedback.cs">
-      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\HardwareShop322Mat.Context.cs">
+    <Compile Include="Components\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HardwareShop322Mat.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\HardwareShop322Mat.cs">
+    <Compile Include="Components\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Components\HardwareShop322Mat.Designer.cs">
+    <Compile Include="Components\Model11.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\Partial classes\Product.cs" />
+    <Compile Include="Components\Navigation.cs" />
+    <Compile Include="Components\ParrtialClass\Client.cs" />
+    <Compile Include="Components\ParrtialClass\ClientService.cs" />
+    <Compile Include="Components\ParrtialClass\Service.cs" />
     <Compile Include="Components\Product.cs">
-      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\ProductUserControl.xaml.cs">
-      <DependentUpon>ProductUserControl.xaml</DependentUpon>
+    <Compile Include="Components\ReagPage.xaml.cs">
+      <DependentUpon>ReagPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ServiceUserControl.xaml.cs">
+      <DependentUpon>ServiceUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\sysdiagrams.cs">
-      <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Components\UpEnPage.xaml.cs">
+      <DependentUpon>UpEnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddReadactPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ServiceListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddReadactPage.xaml.cs">
+      <DependentUpon>AddReadactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiceListPage.xaml.cs">
+      <DependentUpon>ServiceListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,12 +158,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Components\HardwareShop322Mat.edmx">
+    <EntityDeploy Include="Components\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HardwareShop322Mat.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Components\HardwareShop322Mat.edmx.diagram">
-      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
+    <None Include="Components\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -144,27 +175,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Diagramma.png" />
-    <Resource Include="Images\Heart.png" />
-    <Resource Include="Images\korzina.png" />
-    <Resource Include="Images\Star1.png" />
+    <Content Include="Components\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Components\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model11.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Pages\school_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Components\HardwareShop322Mat.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
-      <LastGenOutput>HardwareShop322Mat.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Components\HardwareShop322Mat.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
-      <LastGenOutput>HardwareShop322Mat.cs</LastGenOutput>
-    </Content>
-    <Resource Include="Images\tovar.jpg" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

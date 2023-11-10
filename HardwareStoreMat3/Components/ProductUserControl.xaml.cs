@@ -21,14 +21,14 @@ namespace HardwareStoreMat3.Components
     public partial class ProductUserControl : UserControl
     {
         Product product;
-        public ProductUserControl(Product _product)
+        public ProductUserControl(Product product)
         {
             InitializeComponent();
-            product = _product;
+            this.product = product;
             TitleTb.Text = product.Title;
-            OcenkaTb.Text = product.AvgOcenka.ToString();
-            OtziviTb.Text = product.KolvoOtziv.ToString();
-            CostTb.Text = product.Cost.ToString();
+            OcenkaTb.Text = $"{product.AvgOcenka: 0.00}";
+            OtziviTb.Text = product.KolvoOtziv + " отзывов";
+            CostTb.Text = $"{product.Cost: 0.00}";
             CostWithDiscountTb.Text = product.CostWithDiscount;
             CostTb.Visibility = product.CostVisiblity;
         }
