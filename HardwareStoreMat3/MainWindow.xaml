@@ -12,14 +12,14 @@
             <RowDefinition Height="150*"></RowDefinition>
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="36" Width="800">
-            <TextBlock Margin="5" FontSize="15" Width="60">По цене</TextBlock>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="55" Width="1000">
+            <TextBlock Margin="15" FontSize="15" Width="60">По цене</TextBlock>
             <ComboBox x:Name="SortCb" Margin="5" SelectionChanged="SortCb_SelectionChanged">
                 <ComboBoxItem>По умолчанию</ComboBoxItem>
                 <ComboBoxItem>По возрастанию</ComboBoxItem>
                 <ComboBoxItem>По убыванию</ComboBoxItem>
             </ComboBox>
-            <TextBlock Margin="5" FontSize="15">По скидке</TextBlock>
+            <TextBlock Margin="15" FontSize="15">По скидке</TextBlock>
             <ComboBox Margin="5" x:Name="DiscountFilterCb" SelectionChanged="DiscountFilterCb_SelectionChanged">
                 <ComboBoxItem>Все</ComboBoxItem>
                 <ComboBoxItem>от 0 до 5%</ComboBoxItem>
@@ -28,10 +28,10 @@
                 <ComboBoxItem>от 30 до 70%</ComboBoxItem>
                 <ComboBoxItem>от 70 до 100%</ComboBoxItem>
             </ComboBox>
-            <TextBlock Margin="5" FontSize="15">По названию и описанию</TextBlock>
+            <TextBlock Margin="15" FontSize="15">По названию и описанию</TextBlock>
             <TextBox Margin="5" x:Name="SearchTb" FontSize="14" TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="0,72,0,0" Grid.RowSpan="2">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Margin="0,85,0,0" Grid.RowSpan="2">
             <WrapPanel x:Name="ProductWrapPanel" HorizontalAlignment="Center">
             </WrapPanel>
         </ScrollViewer>

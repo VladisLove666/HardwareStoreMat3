@@ -1,0 +1,37 @@
+﻿<Window x:Class="HardwareStoreMat3.Components.Redakt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HardwareStoreMat3.Components"
+        mc:Ignorable="d"
+        Title="Redakt" Height="570" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center">Название</TextBlock>
+                    <TextBox Text="{Binding Title}" x:Name="TitleTb" Height="70" TextWrapping="Wrap" ></TextBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center">Cтоимость</TextBlock>
+                    <TextBox Text="{Binding Cost}" x:Name="CostTb"></TextBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Margin="9">Скидка</TextBlock>
+                    <TextBox Text="{Binding Discount}" x:Name="DiscountTb"></TextBox>
+                </StackPanel>
+                <StackPanel>
+                    <Image Source="{Binding MainImage}"  x:Name="KursImage" Height="150" Width="150"></Image>
+                    <ScrollViewer HorizontalAlignment="Center" HorizontalScrollBarVisibility="Disabled" Height="112" Margin="2">
+                        <WrapPanel x:Name ="PhotoWp"></WrapPanel>
+                    </ScrollViewer>
+                    <Button x:Name="AddImageBtn">Добавить изображение</Button>
+
+                    <Button x:Name="EditImage">Изменить изображение</Button>
+                </StackPanel>
+                <Button>Сохранить изменения</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

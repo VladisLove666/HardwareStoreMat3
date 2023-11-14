@@ -68,6 +68,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Components\Redakt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +104,9 @@
     </Compile>
     <Compile Include="Components\ProductUserControl.xaml.cs">
       <DependentUpon>ProductUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Redakt.xaml.cs">
+      <DependentUpon>Redakt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\sysdiagrams.cs">
       <DependentUpon>HardwareShop322Mat.tt</DependentUpon>
@@ -163,6 +170,7 @@
       <DependentUpon>HardwareShop322Mat.edmx</DependentUpon>
       <LastGenOutput>HardwareShop322Mat.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\redakt.png" />
     <Resource Include="Images\udalenie.png" />
     <Resource Include="Images\tovar.jpg" />
   </ItemGroup>
